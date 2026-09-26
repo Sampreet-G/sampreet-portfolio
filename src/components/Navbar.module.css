@@ -1,0 +1,15 @@
+.header { position: fixed; top: 14px; left: 0; right: 0; z-index: 40; padding: 0 18px; }
+.nav { width: min(1180px, 100%); height: 58px; margin: auto; display: flex; align-items: center; justify-content: space-between; padding: 0 18px 0 22px; background: rgba(255,255,255,.88); backdrop-filter: blur(16px); border: 1px solid rgba(219,232,243,.95); border-radius: 16px; box-shadow: 0 8px 28px rgba(42,86,122,.08); }
+.brand { border: 0; background: transparent; font: 800 20px var(--font-display); letter-spacing: -.04em; cursor: pointer; }
+.brandBlue { color: var(--blue); }.brandOrange { color: var(--orange); }
+.desktopLinks { display: flex; align-items: center; gap: 28px; }
+.desktopLinks button { border: 0; background: transparent; color: #29425d; text-transform: capitalize; font-size: 13px; font-weight: 600; cursor: pointer; transition: color .2s, transform .2s; }
+.desktopLinks button:hover { color: var(--blue); transform: translateY(-1px); }
+.connect { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid #8dbef1; color: var(--blue-dark); background: #f7fbff; padding: 9px 15px; border-radius: 12px; font-size: 13px; font-weight: 700; }
+.connect span { font-size: 16px; }.connect:hover { background: var(--blue); color: white; border-color: var(--blue); }
+.menu { display: none; border: 0; background: transparent; cursor: pointer; width: 40px; height: 40px; }
+.menu span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 4px auto; border-radius: 5px; }
+.mobileMenu { width: min(1180px, calc(100% - 36px)); margin: 8px auto 0; padding: 12px; display: grid; gap: 3px; background: white; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.mobileMenu button, .mobileMenu a { padding: 12px 14px; border: 0; background: transparent; color: var(--ink); text-align: left; font-weight: 600; text-transform: capitalize; cursor: pointer; border-radius: 9px; }
+.mobileMenu button:hover, .mobileMenu a:hover { background: var(--surface-soft); color: var(--blue); }
+@media (max-width: 850px) { .desktopLinks, .connect { display: none; } .menu { display: block; } }

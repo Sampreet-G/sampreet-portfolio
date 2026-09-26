@@ -1,0 +1,32 @@
+.hero { min-height: 720px; padding: 132px 0 72px; position: relative; overflow: hidden; background: linear-gradient(135deg, #f8fcff 0%, #eef7ff 52%, #fffaf4 100%); border-bottom: 1px solid var(--line); }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 49.8%, rgba(116,163,202,.08) 50%, transparent 50.2%), linear-gradient(rgba(116,163,202,.06) 1px, transparent 1px); background-size: 100% 100%, 100% 72px; pointer-events:none; }
+.blobA { position:absolute; width:240px; height:240px; border-radius: 42% 58% 61% 39%; background:#d9efff; left:-105px; top:145px; transform:rotate(18deg); opacity:.85; }
+.blobB { position:absolute; width:270px; height:270px; border-radius: 55% 45% 35% 65%; background:#fff0dc; right:-120px; bottom:-110px; transform:rotate(-12deg); }
+.dot { position:absolute; width:26px; height:26px; border-radius:50%; background:#ffd39e; left:8%; top:128px; }
+.grid { position:relative; z-index:2; display:grid; grid-template-columns: 1.02fr .98fr; gap:56px; align-items:center; }
+.copy { padding-top: 10px; }
+.status { display:flex; align-items:center; gap:9px; font:700 11px var(--font-mono); color:#2e4964; letter-spacing:.04em; }
+.status span { width:10px; height:10px; border-radius:50%; background:var(--orange); box-shadow:0 0 0 5px #ffead7; }
+.status b { color:#9aaabd; font-weight:400; }
+h1 { margin-top:20px; font:800 clamp(48px, 6vw, 76px)/.98 var(--font-display); letter-spacing:-.065em; color:#102b47; }
+h1 span { color:var(--blue); position:relative; display:inline-block; }
+h1 span::after { content:''; position:absolute; height:7px; width:100%; left:4px; bottom:-4px; background:var(--orange); border-radius:99px; transform:rotate(-2deg); opacity:.95; }
+h2 { margin-top:24px; font:800 clamp(22px, 2.6vw, 31px)/1.15 var(--font-display); letter-spacing:-.035em; }
+h2 i { color:var(--orange); font-style:normal; }
+.intro { max-width:620px; margin-top:18px; color:#58708a; font-size:17px; line-height:1.72; }
+.actions { display:flex; gap:12px; margin-top:28px; flex-wrap:wrap; }
+.primary, .secondary { display:inline-flex; align-items:center; gap:13px; min-height:48px; padding:0 21px; border-radius:13px; font-weight:700; font-size:14px; cursor:pointer; transition:transform .2s, box-shadow .2s, background .2s; }
+.primary { border:1px solid var(--blue); color:#fff; background:var(--blue); box-shadow:0 9px 20px rgba(20,115,230,.2); }.primary:hover { transform:translateY(-2px); background:var(--blue-dark); }
+.secondary { border:1px solid #efc79d; background:white; color:#8d4c12; }.secondary:hover { transform:translateY(-2px); box-shadow:var(--shadow-sm); }
+.socials { display:flex; gap:9px; margin-top:22px; }.socials a { width:38px; height:38px; border:1px solid #cfe0ee; background:rgba(255,255,255,.8); border-radius:50%; display:grid; place-items:center; color:#335a7c; font:700 11px var(--font-mono); transition:.2s; }.socials a:hover { color:var(--blue); border-color:#8dbef1; transform:translateY(-2px); }
+.visual { min-height:490px; position:relative; display:flex; align-items:center; justify-content:center; }
+.workspace { width:min(560px, 100%); border:1px solid #c8ddec; border-radius:18px; background:#fff; box-shadow:0 28px 70px rgba(36,91,133,.16); transform:rotate(1.5deg); overflow:hidden; position:relative; z-index:2; }
+.windowBar { height:42px; display:flex; align-items:center; gap:7px; padding:0 14px; border-bottom:1px solid #e2edf5; background:#fbfdff; }.windowBar span { width:9px;height:9px;border-radius:50%;background:#ffb15c; }.windowBar span:nth-child(2){background:#8ec7ff}.windowBar span:nth-child(3){background:#8ed7b0}.windowBar em { margin-left:auto; font:400 10px var(--font-mono); color:#8498aa; font-style:normal; }
+.code { padding:30px 28px 25px; min-height:290px; background:linear-gradient(135deg,#f8fbff,#f5f9fd); font:14px/2.05 var(--font-mono); color:#29425d; }.code small { display:inline-block; width:30px; color:#a6b6c5; font-size:10px; }.purple{color:#855cc7}.orange{color:#e66f18}.blue{color:#1473e6}.green{color:#1f9365}.code b{font-weight:700;color:#173653}.cursor{color:var(--orange);animation:blink 1s steps(2) infinite}.cursorLine{margin-top:6px}.windowFooter { display:flex; gap:7px; flex-wrap:wrap; padding:13px 18px; border-top:1px solid #e2edf5; }.windowFooter span { padding:5px 9px; border-radius:7px; background:#eef7ff; color:#4a6d8e; font:700 10px var(--font-mono); }
+.note { position:absolute; top:18px; right:-5px; z-index:4; padding:13px 18px; background:#fff; border:1px solid #cfe0ee; border-radius:12px; box-shadow:var(--shadow-sm); color:#38566f; font-size:12px; line-height:1.35; transform:rotate(-4deg); }.note strong{color:var(--blue)}.note span{display:block;text-align:right;color:var(--orange);font-size:19px}
+.cardNote { position:absolute; left:0; bottom:55px; z-index:4; display:flex; align-items:center; gap:9px; padding:11px 15px; background:#fff7ed; border:1px solid #f2cfaa; border-radius:12px; transform:rotate(-4deg); box-shadow:var(--shadow-sm); }.cardNote b{font:800 23px var(--font-display);color:var(--orange)}.cardNote span{font-size:11px;line-height:1.25;color:#73563d}
+.sticky { position:absolute; right:0; bottom:30px; z-index:4; width:125px; padding:13px; background:#e7f4ff; border:1px solid #c7e2f6; border-radius:7px; transform:rotate(5deg); box-shadow:var(--shadow-sm); }.sticky span{font:700 9px var(--font-mono);color:var(--blue)}.sticky b{display:block;margin-top:3px;font:800 14px var(--font-display)}.sticky small{font-size:10px;color:#58708a}
+.scroll { position:absolute; left:50%; bottom:19px; transform:translateX(-50%); font:700 9px var(--font-mono); color:#8aa0b5; letter-spacing:.12em; }.scroll span{color:var(--orange);font-size:14px;margin-left:5px}
+@keyframes blink { 50%{opacity:0} }
+@media (max-width: 900px){ .hero{padding-top:110px}.grid{grid-template-columns:1fr;gap:35px}.visual{min-height:410px}.copy{max-width:700px}.note{right:0}.scroll{display:none} }
+@media (max-width: 560px){ .hero{min-height:auto;padding-bottom:48px}.intro{font-size:15px}.visual{min-height:330px}.workspace{transform:none}.code{font-size:10px;padding:18px;min-height:220px}.windowBar{height:34px}.cardNote{left:-4px;bottom:12px}.sticky{right:-2px;bottom:-5px}.note{top:-4px;font-size:10px}.dot{top:96px} }
